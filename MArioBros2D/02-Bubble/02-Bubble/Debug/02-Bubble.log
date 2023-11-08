@@ -1,0 +1,17 @@
+﻿  Player.cpp
+C:\Escuela\7 curso\VJ\VJ-2D\02-Bubble\02-Bubble\Player.cpp(48,15): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Escuela\7 curso\VJ\VJ-2D\02-Bubble\02-Bubble\Player.cpp(205,18): warning C4244: '+=': conversión de 'double' a 'T'; posible pérdida de datos
+          with
+          [
+              T=int
+          ]
+C:\Escuela\7 curso\VJ\VJ-2D\02-Bubble\02-Bubble\Player.cpp(208,18): warning C4244: '=': conversión de 'float' a 'T'; posible pérdida de datos
+          with
+          [
+              T=int
+          ]
+SOIL.lib(image_DXT.obj) : warning LNK4099: no se encontró PDB '' con 'SOIL.lib(image_DXT.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+SOIL.lib(image_helper.obj) : warning LNK4099: no se encontró PDB '' con 'SOIL.lib(image_helper.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+SOIL.lib(SOIL.obj) : warning LNK4099: no se encontró PDB '' con 'SOIL.lib(SOIL.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+SOIL.lib(stb_image_aug.obj) : warning LNK4099: no se encontró PDB '' con 'SOIL.lib(stb_image_aug.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+  02-Bubble.vcxproj -> C:\Escuela\7 curso\VJ\VJ-2D\02-Bubble\Debug\02-Bubble.exe
