@@ -74,16 +74,19 @@ void Menu::update(int deltaTime)
 	{
 		if (menuState == START)
 		{
+
 			menuState = INSTRUCTIONS;
 			mainSprite->changeAnimation(INSTRUCTIONS);
 		}
 		else if (menuState == INSTRUCTIONS)
 		{
+
 			menuState = CREDITS;
 			mainSprite->changeAnimation(CREDITS);
 
 		}
 		Game::instance().specialKeyReleased(GLUT_KEY_DOWN);
+		SoundManager::instance().playSound("sounds/change-between-button.wav", 1.f);
 
 
 	}
@@ -94,16 +97,19 @@ void Menu::update(int deltaTime)
 	{
 		if (menuState == CREDITS)
 		{
+
 			menuState = INSTRUCTIONS;
 			mainSprite->changeAnimation(INSTRUCTIONS);
 		}
 		else if (menuState == INSTRUCTIONS)
 		{
+
 			menuState = START;
 			mainSprite->changeAnimation(START);
 
 		}
 		Game::instance().specialKeyReleased(GLUT_KEY_UP);
+		SoundManager::instance().playSound("sounds/change-between-button.wav", 1.f);
 
 	}
 

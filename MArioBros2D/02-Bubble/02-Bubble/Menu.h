@@ -7,6 +7,7 @@
 #include "Sprite.h"
 #include <vector>
 #include <string>
+#include "SoundManager.h"
 
 
 

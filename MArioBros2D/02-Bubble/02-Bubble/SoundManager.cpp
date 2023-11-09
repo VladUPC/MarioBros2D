@@ -17,11 +17,11 @@ SoundManager& SoundManager::instance() {
 
 
 void SoundManager::playSound(const char* soundFile, float volume) {
-    if (engine) {
+    if (engine ) {
         ISound* sound = engine->play2D(soundFile, false, false, true);
         if (sound) {
             sound->setVolume(volume);
-            sound->drop(); // don't forget to release the sound when done using it
+            sound->drop(); 
         }
     }
 }
@@ -31,7 +31,8 @@ void SoundManager::stopAllSounds() {
         engine->stopAllSounds();
 }
 
+
 SoundManager::~SoundManager() {
     if (engine)
-        engine->drop(); // delete engine
+        engine->drop(); 
 }
