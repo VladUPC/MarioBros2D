@@ -17,7 +17,8 @@ enum PlayerAnims
 {
 	STAND_LEFT, STAND_RIGHT, MOVE_LEFT, MOVE_RIGHT, 
 	JUMP_UP_LEFT, JUMP_DOWN_LEFT, JUMP_UP_RIGHT , JUMP_DOWN_RIGHT,
-	DIE
+	DIE, SMALL_TO_BIG_RIGHT, SMALL_TO_BIG_LEFT, BIG_TO_SMALL_LEFT, BIG_TO_SMALL_RIGHT,
+	GRAB_FLAG
 };
 
 
@@ -62,7 +63,7 @@ void Player::animateMario(int type, glm::ivec2 size, ShaderProgram& shaderProgra
 
 	sprite = Sprite::createSprite(size, glm::vec2(32.f / 1344.f, 2 * 32.f / 1056.f), &spritesheet, &shaderProgram);
 
-	sprite->setNumberAnimations(9);
+	sprite->setNumberAnimations(14);
 
 	sprite->setAnimationSpeed(STAND_LEFT, 8);
 	sprite->addKeyframe(STAND_LEFT, glm::vec2(20 * 32.f / 1344.f, marioTipo));
@@ -97,6 +98,27 @@ void Player::animateMario(int type, glm::ivec2 size, ShaderProgram& shaderProgra
 
 	sprite->setAnimationSpeed(DIE, 8);
 	sprite->addKeyframe(DIE, glm::vec2(5 * 32.f / 1344.f, marioTipo));
+
+	sprite->setAnimationSpeed(SMALL_TO_BIG_RIGHT, 2);
+	sprite->addKeyframe(SMALL_TO_BIG_RIGHT, glm::vec2(36 * 32.f / 1344.f, marioTipo));
+	sprite->addKeyframe(SMALL_TO_BIG_RIGHT, glm::vec2(37 * 32.f / 1344.f, marioTipo));
+
+	sprite->setAnimationSpeed(SMALL_TO_BIG_LEFT, 2);
+	sprite->addKeyframe(SMALL_TO_BIG_LEFT, glm::vec2(5 * 32.f / 1344.f, marioTipo));
+	sprite->addKeyframe(SMALL_TO_BIG_LEFT, glm::vec2(4 * 32.f / 1344.f, marioTipo));
+
+	sprite->setAnimationSpeed(BIG_TO_SMALL_RIGHT, 2);
+	sprite->addKeyframe(BIG_TO_SMALL_RIGHT, glm::vec2(21 * 32.f / 1344.f, marioTipo));
+	sprite->addKeyframe(BIG_TO_SMALL_RIGHT, glm::vec2(36 * 32.f / 1344.f, marioTipo));
+
+	sprite->setAnimationSpeed(BIG_TO_SMALL_LEFT, 2);
+	sprite->addKeyframe(BIG_TO_SMALL_LEFT, glm::vec2(20 * 32.f / 1344.f, marioTipo));
+	sprite->addKeyframe(BIG_TO_SMALL_LEFT, glm::vec2(5 * 32.f / 1344.f, marioTipo));
+
+	sprite->setAnimationSpeed(GRAB_FLAG, 2);
+	sprite->addKeyframe(GRAB_FLAG, glm::vec2(29 * 32.f / 1344.f, marioTipo));
+
+	
 }
 
 
