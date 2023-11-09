@@ -1,5 +1,5 @@
-#ifndef CREDITS_INCLUDE
-#define CREDITS_INCLUDE
+#ifndef INSTRUCTIONS_INCLUDE
+#define INSTRUCTIONS_INCLUDE
 
 
 #include <glm/glm.hpp>
@@ -10,12 +10,12 @@
 
 
 
-class Credits
+class Instructions
 {
 public:
-	Credits();
+	Instructions();
 
-	~Credits();
+	~Instructions();
 
 	void init();
 	void update(int deltaTime);

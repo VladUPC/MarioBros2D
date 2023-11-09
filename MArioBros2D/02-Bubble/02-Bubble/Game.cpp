@@ -12,6 +12,8 @@ void Game::init()
 	if (activeScene == "MENU") menu.init();
 	else if (activeScene == "LEVEL") scene.init();
 	else if (activeScene == "CREDITS") credits.init();
+	else if (activeScene == "INSTRUCTIONS") instructions.init();
+
 }
 
 bool Game::update(int deltaTime)
@@ -20,6 +22,7 @@ bool Game::update(int deltaTime)
 	if (activeScene == "MENU") menu.update(deltaTime);
 	else if (activeScene == "LEVEL") scene.update(deltaTime);
 	else if (activeScene == "CREDITS") credits.update(deltaTime);
+	else if (activeScene == "INSTRUCTIONS") instructions.update(deltaTime);
 
 
 	
@@ -33,6 +36,7 @@ void Game::render()
 	if (activeScene == "MENU") menu.render();
 	else if (activeScene == "LEVEL") scene.render();
 	else if (activeScene == "CREDITS") credits.render();
+	else if (activeScene == "INSTRUCTIONS") instructions.render();
 
 }
 
@@ -86,6 +90,7 @@ void Game::changeScene(string id_scene)
 	if (activeScene == "MENU") menu.init();
 	else if (activeScene == "LEVEL") scene.init();
 	else if (activeScene == "CREDITS") credits.init();
+	else if (activeScene == "INSTRUCTIONS") instructions.init();
 
 }
 

@@ -1,4 +1,4 @@
-#include "Credits.h"
+#include "Instructions.h"
 #include <iostream>
 #include <glm/gtc/matrix_transform.hpp>
 #include "Game.h"
@@ -11,18 +11,18 @@
 
 
 
-Credits::Credits()
+Instructions::Instructions()
 {
 
 }
 
-Credits::~Credits()
+Instructions::~Instructions()
 {
 	if (mainSprite != NULL) delete mainSprite;
 }
 
 
-void Credits::init()
+void Instructions::init()
 {
 	initShaders();
 
@@ -30,7 +30,7 @@ void Credits::init()
 
 
 
-	spritesheet.loadFromFile("images/credits_bground.png", TEXTURE_PIXEL_FORMAT_RGBA);
+	spritesheet.loadFromFile("images/instructions.png", TEXTURE_PIXEL_FORMAT_RGBA);
 
 
 	mainSprite = Sprite::createSprite(glm::ivec2(glutGet(GLUT_WINDOW_WIDTH), glutGet(GLUT_WINDOW_HEIGHT)),
@@ -46,24 +46,24 @@ void Credits::init()
 
 }
 
-void Credits::update(int deltaTime)
+void Instructions::update(int deltaTime)
 {
-	
+
 	if (Game::instance().getSpecialKey(GLUT_KEY_LEFT))
 	{
 		backToMenu();
 	}
-	
+
 
 	mainSprite->update(deltaTime);
 }
 
-void Credits::backToMenu()
+void Instructions::backToMenu()
 {
 	Game::instance().changeScene("MENU");
 }
 
-void Credits::render()
+void Instructions::render()
 {
 	glm::mat4 modelview;
 
@@ -82,7 +82,7 @@ void Credits::render()
 }
 
 
-void Credits::initShaders()
+void Instructions::initShaders()
 {
 	Shader vShader, fShader;
 

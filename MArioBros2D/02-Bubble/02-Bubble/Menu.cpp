@@ -134,6 +134,8 @@ void Menu::aplyState(int state)
 
 	if (state == 0) Game::instance().changeScene("LEVEL");
 	else if (state == 2) Game::instance().changeScene("CREDITS");
+	else if (state == 1) Game::instance().changeScene("INSTRUCTIONS");
+
 
 	menuState = 0;
 }

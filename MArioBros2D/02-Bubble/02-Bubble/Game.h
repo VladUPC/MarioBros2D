@@ -5,6 +5,7 @@
 #include "Scene.h"
 #include "Menu.h"
 #include "Credits.h"
+#include "Instructions.h"
 #include "string"
 
 
@@ -51,6 +52,7 @@ private:
 	Scene scene;                      // Scene to render
 	Menu menu;
 	Credits credits;
+	Instructions instructions;
 	bool keys[256], specialKeys[256]; // Store key states so that 
 	                                 // we can have access at any time
 	string activeScene;
