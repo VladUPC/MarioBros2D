@@ -27,8 +27,8 @@ void UserInterface::init(string newScore, string newNumCoins, string newNameLeve
 	nameLevel = newNameLevel;
 	posNameLevel = glm::vec2(250, SCREEN_Y + 20);
 
-	numLifes = "3";
-	posNumLifes = glm::vec2(400, SCREEN_Y + 20);
+	numLives = "3";
+	posNumLives = glm::vec2(400, SCREEN_Y + 20);
 
 	time = newTime;
 	posTime = glm::vec2(500, SCREEN_Y + 20);
@@ -48,8 +48,8 @@ void UserInterface::render()
 	text.render("COINS", glm::vec2(posNumCoins.x, SCREEN_Y + 2), TEXT_SIZE, TEXT_COLOR);
 	text.render(numCoins, posNumCoins, TEXT_SIZE, TEXT_COLOR);
 
-	text.render("LIFES", glm::vec2(posNumLifes.x, SCREEN_Y + 2), TEXT_SIZE, TEXT_COLOR);
-	text.render(numLifes, posNumLifes, TEXT_SIZE, TEXT_COLOR);
+	text.render("LIVES", glm::vec2(posNumLives.x, SCREEN_Y + 2), TEXT_SIZE, TEXT_COLOR);
+	text.render(numLives, posNumLives, TEXT_SIZE, TEXT_COLOR);
 
 	text.render("WORLD", glm::vec2(posNameLevel.x, SCREEN_Y + 2), TEXT_SIZE, TEXT_COLOR);
 	text.render(nameLevel, posNameLevel, TEXT_SIZE, TEXT_COLOR);
@@ -79,7 +79,7 @@ void UserInterface::setTime(string newTime)
 	time = newTime;
 }
 
-void UserInterface::setNumLifes(string newNumLifes)
+void UserInterface::setNumLives(string newNumLives)
 {
-	numLifes = newNumLifes;
+	numLives = newNumLives;
 }

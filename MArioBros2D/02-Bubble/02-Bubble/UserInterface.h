@@ -16,12 +16,12 @@ public:
 	void setNumCoins(string newNumCoins);
 	void setNameLevel(string newNameLevel);
 	void setTime(string newTime);
-	void setNumLifes(string newNumLifes);
+	void setNumLives(string newNumLives);
 
 
 private:
-	glm::ivec2 posScore, posNumCoins, posNameLevel, posTime, posNumLifes;
-	string score, numCoins, nameLevel, time, numLifes;
+	glm::ivec2 posScore, posNumCoins, posNameLevel, posTime, posNumLives;
+	string score, numCoins, nameLevel, time, numLives;
 	Text text;
 };
 
