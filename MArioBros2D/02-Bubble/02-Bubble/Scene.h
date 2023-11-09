@@ -9,6 +9,8 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "Powerup.h"
+#include <string>
+#include "UserInterface.h"
 
 
 // Scene contains all the entities of our game.
@@ -39,6 +41,7 @@ private:
 	glm::mat4 projection;
 	float cameraX;
 	bool paintDamagedMario;
+	UserInterface userInterface;
 
 };
 

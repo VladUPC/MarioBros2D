@@ -66,10 +66,13 @@ void Scene::init()
 	currentTime = 0.0f;
 	cameraX = 0.0f;
 	paintDamagedMario = true;
+
+	userInterface.init("0", "0", "1-1", "400");
 }
 
 void Scene::update(int deltaTime)
 {
+
 	if (player->getDone()) {
 		if (map != NULL)
 			delete map;
@@ -100,6 +103,8 @@ void Scene::update(int deltaTime)
 
 void Scene::render()
 {
+
+
 	paintDamagedMario = !paintDamagedMario;
 	glm::mat4 modelview;
 
@@ -128,7 +133,11 @@ void Scene::render()
 	for (auto p : powers) {
 		if (p->getActive()) p->render();
 	}
+
+
+	userInterface.render();
 }
+
 
 void Scene::initShaders()
 {
